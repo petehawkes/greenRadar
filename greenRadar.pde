@@ -1,8 +1,4 @@
-/**
- * Multiple Particle Systems
- * by Daniel Shiffman.  
- * 
- */
+
 import processing.opengl.*;
 ArrayList psystems;
 
@@ -30,8 +26,6 @@ int freqCount = 0;
 
 //
 // SERIAL
-
-// Include the serial library
 import processing.serial.*;
 
 // Variable declaration
@@ -76,27 +70,26 @@ void setup() {
     port.write('0');
     port.write(CR);
   }
-
-
+  
   background(0);
 }
 
 
 
-
 void draw() {
   background(0);
+
+  // reveal map
   if (mousePressed) {
     fader += (60-fader)*.1;
-    
-   
-  } else {
-    fader += (100-fader)*.1; 
+  } 
+  else {
+    fader += (100-fader)*.1;
   }
-  
-   image(myMap, 0, 0);
-    fill(0, fader);
-    rect(0, 0, width, height);
+
+  image(myMap, 0, 0);
+  fill(0, fader);
+  rect(0, 0, width, height);
 
 
   if (!falseBeat) {
@@ -118,12 +111,5 @@ void draw() {
   }
 }
 
-
-
-
-// When the mouse is pressed, add a new particle system
-void mousePressed() {
- // makePulse();
-}
 
 

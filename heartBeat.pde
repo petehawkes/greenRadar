@@ -1,7 +1,9 @@
-
+//
+// HEART BEAT DETECTION
+// Polar Heart Monitor: http://www.amazon.com/Polar-T31-Non-Coded-Transmitter-Belt/dp/B000N4N4UG/
+// Polar Heart Rate Interface from Sparkfun: https://www.sparkfun.com/products/8661
 
 void checkBeat() {
-
   validData = 0;
   port.write('G');
   port.write('1');
@@ -25,16 +27,14 @@ void triggerBeat() {
 
 void makeFalseBeat() {
   if (millis() - beatStamp > 1000) {
-     triggerBeat();
-     beatStamp = millis(); 
+    triggerBeat();
+    beatStamp = millis();
   }
 }
 
 
 void makePulse() {
-  
-    psystems.add(new ParticleSystem(360, new PVector(mouseX, mouseY)));
-    
+  psystems.add(new ParticleSystem(360, new PVector(mouseX, mouseY)));
 }
 
 

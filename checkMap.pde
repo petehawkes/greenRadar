@@ -1,5 +1,7 @@
-boolean checkMap(float x, float y, PImage img) {
+//
+// Check map pixels for green
 
+boolean checkMap(float x, float y, PImage img) {
   int xPos = int(x);
   int yPos = int(y);
 

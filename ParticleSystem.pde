@@ -1,3 +1,9 @@
+/**
+ * Multiple Particle Systems
+ * by Daniel Shiffman.  
+ * 
+ */
+ 
 // An ArrayList is used to manage the list of Particles 
 
 class ParticleSystem {

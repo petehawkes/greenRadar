@@ -1,3 +1,9 @@
+/**
+ * Multiple Particle Systems
+ * by Daniel Shiffman.  
+ * 
+ */
+ 
 // A simple Particle class
 
 class Particle {
